@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+@layer components {
+  .btn-cta {
+    @apply px-8 py-4 rounded-full font-bold text-white text-lg tracking-wide;
+    background: linear-gradient(135deg, #dc2626, #ea580c);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+  }
+  .btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.6);
+  }
+
+  .fade-overlay {
+    position: relative;
+  }
+  .fade-overlay::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(transparent, white);
+    pointer-events: none;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #b8860b, #daa520, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
